@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: "Current: Harvard University, Computational biology<br>Broad Institute / Bo XIA"
 
 profile:
   align: right
