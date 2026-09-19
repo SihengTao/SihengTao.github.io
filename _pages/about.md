@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Current: Harvard University, Computational biology<br>Broad Institute / Bo XIA"
+subtitle: ""
 
 profile:
   align: right
@@ -27,8 +27,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a master’s student in Computational Biology & Quantitative Genetics at Harvard University, working with Bo Xia at the Broad Institute of MIT and Harvard.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+In Bo Xia’s lab, I use computational approaches to explore gene regulation and cellular behavior.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Previously, I worked with Chongde Wu on microbiology and with Xuelei Ma on epidemiology.
+
+I have broad interests in computational biology, particularly epigenomics, immunology, and transcriptional regulation. I enjoy finding the right models and techniques to address biological questions—and developing new tools when existing ones fall short.
