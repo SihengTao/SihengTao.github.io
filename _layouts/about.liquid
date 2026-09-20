@@ -9,6 +9,7 @@ layout: default
 .st-timeline{border-left:2px solid var(--global-divider-color,#ddd);margin-left:7px;padding-left:26px}.st-event{position:relative;padding-bottom:25px}
 .st-event:before{content:"";position:absolute;left:-33px;top:7px;width:12px;height:12px;background:var(--global-theme-color,#2698ba);border-radius:50%}
 .st-event h3{font-size:1.1rem;font-weight:600;margin:0 0 4px}.st-event .date{font-size:.87rem;color:var(--global-text-color-light,#777)}.st-event p{margin:6px 0}
+.st-event h4{font-size:1rem;font-weight:600;margin:18px 0 8px}.st-event ul{padding-left:20px;line-height:1.8}
 .st-home .publications ol.bibliography{padding-left:0}.st-home .publications li{margin-bottom:28px}.st-home .publications .author{line-height:1.8}
 .st-updates{list-style:none;padding:0}.st-updates li{display:flex;gap:20px;margin-bottom:14px}.st-updates time{flex:0 0 90px;color:var(--global-text-color-light,#777)}
 @media(max-width:650px){.st-intro{grid-template-columns:1fr;gap:24px}.st-profile{grid-row:1;max-width:260px;margin:auto}.st-updates li{display:block}}
@@ -28,11 +29,34 @@ layout: default
 <section class="st-section" id="experience">
 <h2>Experience</h2>
 <div class="st-timeline">
-<div class="st-event"><h3>Xia Lab · Broad Institute of MIT and Harvard</h3><div class="date">Oct 2025 – Present</div><p>Computational research with Dr. Bo XIA.</p></div>
-<div class="st-event"><h3>Harvard University · HSPH</h3><div class="date">Sep 2025 – Present</div><p>Master’s student in Computational Biology &amp; Quantitative Genetics.</p></div>
-<div class="st-event"><h3>West China Hospital · Sichuan University</h3><div class="date">Jul 2023 – Feb 2025</div><p>Epidemiology research with Xuelei Ma.</p></div>
-<div class="st-event"><h3>Sichuan University · Chongde Wu’s Lab</h3><div class="date">Jul 2023 – Oct 2024</div><p>Microbiology research, microbial culture, and laboratory analysis.</p></div>
-<div class="st-event"><h3>Sichuan University</h3><div class="date">Sep 2021 – Jun 2025</div><p>B.S. with Honors in Biological Engineering.</p></div>
+<div class="st-event">
+<h3>Harvard University</h3>
+<div class="date">Sep 2025 – Present</div>
+<p>Master’s student in Computational Biology &amp; Quantitative Genetics.</p>
+<h4>Research</h4>
+<p>Computational biology with Dr. Bo XIA, Xia Lab, Broad Institute of MIT and Harvard.</p>
+<h4>Teaching</h4>
+<p>Teaching Assistant for BST 281, BST 280, and BST 206. Responsibilities include grading assignments and holding office hours.</p>
+<p><a href="{{ '/teaching/' | relative_url }}">Course details</a></p>
+</div>
+<div class="st-event">
+<h3>Sichuan University</h3>
+<div class="date">Sep 2021 – Jun 2025</div>
+<p>B.Sc. with Honors in Biological Engineering.</p>
+<h4>Research</h4>
+<ul>
+<li>Microbiology research with Chongde Wu, including microbial culture and laboratory analysis.</li>
+<li>Epidemiology research with Xuelei Ma at West China Hospital.</li>
+</ul>
+<h4><em>Scholarships and Awards</em></h4>
+<ul>
+<li>Top 10 Outstanding Undergraduate Graduates, Sichuan University — 2025</li>
+<li>National Scholarship — 2022, 2024</li>
+<li>B.Sc. with Honors — 2025</li>
+<li>Meritorious Winner, Interdisciplinary Contest in Modeling — 2024</li>
+<li>First Prize, Sichuan Province, China Undergraduate Mathematical Contest in Modeling — 2024</li>
+</ul>
+</div>
 </div>
 </section>
 <section class="st-section" id="publications"><h2><a href="{{ '/publications/' | relative_url }}" style="color:inherit">Selected publications</a></h2>{% include selected_papers.liquid %}</section>
