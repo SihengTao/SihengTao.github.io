@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<style>
+.st-home .post-title{font-weight:750}.st-intro{display:grid;grid-template-columns:minmax(0,1fr) 265px;gap:42px;align-items:start}
+.st-profile{text-align:center}.st-profile img{width:100%;border-radius:8px}.st-profile h2{font-size:1.45rem;font-weight:700;margin:18px 0 6px}
+.st-profile p{margin:3px 0;font-size:.95rem}.st-profile .contact-icons{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:1.65rem}
+.st-section{margin-top:44px}.st-section>h2{font-size:1.55rem;border-bottom:1px solid var(--global-divider-color,#ddd);padding-bottom:10px;margin-bottom:24px}
+.st-timeline{border-left:2px solid var(--global-divider-color,#ddd);margin-left:7px;padding-left:26px}.st-event{position:relative;padding-bottom:25px}
+.st-event:before{content:"";position:absolute;left:-33px;top:7px;width:12px;height:12px;background:var(--global-theme-color,#2698ba);border-radius:50%}
+.st-event h3{font-size:1.1rem;font-weight:600;margin:0 0 4px}.st-event .date{font-size:.87rem;color:var(--global-text-color-light,#777)}.st-event p{margin:6px 0}
+.st-home .publications ol.bibliography{padding-left:0}.st-home .publications li{margin-bottom:28px}.st-home .publications .author{line-height:1.8}
+.st-updates{list-style:none;padding:0}.st-updates li{display:flex;gap:20px;margin-bottom:14px}.st-updates time{flex:0 0 90px;color:var(--global-text-color-light,#777)}
+@media(max-width:650px){.st-intro{grid-template-columns:1fr;gap:24px}.st-profile{grid-row:1;max-width:260px;margin:auto}.st-updates li{display:block}}
+</style>
+<div class="post st-home">
+<header class="post-header"><h1 class="post-title"><strong>{{ site.first_name }} {{ site.last_name }}</strong></h1></header>
+<article>
+<div class="st-intro">
+<div class="st-bio">{{ content }}</div>
+<aside class="st-profile" aria-label="Profile and contact">
+<img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Profile photo" loading="eager">
+<h2>Siheng Tao</h2>
+<p>Master student</p><p>Harvard University, HSPH</p>
+<div class="contact-icons">{% social_links %}</div>
+</aside>
+</div>
+<section class="st-section" id="experience">
+<h2>Experience</h2>
+<div class="st-timeline">
+<div class="st-event"><h3>Xia Lab · Broad Institute of MIT and Harvard</h3><div class="date">Oct 2025 – Present</div><p>Computational research with Dr. Bo XIA.</p></div>
+<div class="st-event"><h3>Harvard University · HSPH</h3><div class="date">Sep 2025 – Present</div><p>Master’s student in Computational Biology &amp; Quantitative Genetics.</p></div>
+<div class="st-event"><h3>West China Hospital · Sichuan University</h3><div class="date">Jul 2023 – Feb 2025</div><p>Epidemiology research with Xuelei Ma.</p></div>
+<div class="st-event"><h3>Sichuan University · Chongde Wu’s Lab</h3><div class="date">Jul 2023 – Oct 2024</div><p>Microbiology research, microbial culture, and laboratory analysis.</p></div>
+<div class="st-event"><h3>Sichuan University</h3><div class="date">Sep 2021 – Jun 2025</div><p>B.S. with Honors in Biological Engineering.</p></div>
+</div>
+</section>
+<section class="st-section" id="publications"><h2><a href="{{ '/publications/' | relative_url }}" style="color:inherit">Selected publications</a></h2>{% include selected_papers.liquid %}</section>
+<section class="st-section" id="news"><h2>News</h2>
+{% assign updates = site.news | concat: site.posts | sort: 'date' | reverse %}
+<ul class="st-updates">
+{% for item in updates limit:5 %}
+<li><time>{{ item.date | date: '%b %Y' }}</time><div>{% if item.inline %}{{ item.content | markdownify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div></li>
+{% endfor %}
+</ul>
+</section>
+</article></div>
