@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 profile:
-  image: siheng-tao-v2.jpg
+  image: siheng-tao-v3.jpg
 selected_papers: true
 social: true
 ---
