@@ -25,7 +25,12 @@
         {% if forloop.index <= equal_count %}<sup>*</sup>{% endif %}
       {% endfor %}
       {% assign author_count = entry.author_array | size %}
-      {% if author_count > author_limit %}, et al.{% endif %}
+      {% if author_count > author_limit %}, …, {% endif %}
+      {% case entry.key %}
+        {% when 'li2025digital' %}Sheyu Li, Xuelei Ma
+        {% when 'xu2025bacteriocin' %}Chongde Wu
+        {% when 'zhang2026childhood' %}Jiyan Liu, Yazhou He, Hu Liao, Xuelei Ma
+      {% endcase %}
     </div>
     <div class="links">
       <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
