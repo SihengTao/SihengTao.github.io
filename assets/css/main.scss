@@ -1,0 +1,55 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* Personal site presentation. */
+body > footer {
+  display: none !important;
+}
+
+#navbar a.navbar-brand.title,
+#navbar a.navbar-brand.title span {
+  font-weight: 700 !important;
+}
+
+.st-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+.st-photo-grid figure { margin: 0; }
+.st-photo-grid img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.st-photo-grid figcaption { margin-top: 10px; color: var(--global-text-color-light); font-size: 0.9rem; }
+@media (max-width: 650px) {
+  .st-photo-grid { grid-template-columns: 1fr; gap: 24px; }
+}
