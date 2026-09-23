@@ -8,10 +8,10 @@ selected_papers: true
 social: true
 ---
 
-I am a master’s student in **Computational Biology & Quantitative Genetics** at Harvard University, working with **Dr. Bo XIA** at the Broad Institute of MIT and Harvard.
+I am a master’s student in **Computational Biology** and Quantitative Genetics at Harvard University, working with [Dr. Bo Xia](https://www.boxialab.org/team/about-bo-xia) at the Broad Institute of MIT and Harvard.
 
-Currently, I use computational approaches in Xia’s lab to study epigenomics, immune-cell biology, and transcriptional regulation. I combine biological data with computational models to investigate how cells maintain and change their states.
+I am broadly interested in how gene regulation shapes cell identity and how cells maintain or change their states, particularly in immune cells and brain cells. My research combines epigenomic analyses with computational models to explore how chromatin, transcription factors, and other regulatory mechanisms contribute to these processes. Ultimately, I hope to understand how cell fate is determined and how it can be controlled.
 
-Previously, I worked with Chongde Wu on microbiology and with Xuelei Ma on epidemiology.
+Previously, I worked on microbiology with Chongde Wu and epidemiology with Xuelei Ma. I am grateful for these diverse research experiences, which continue to shape how I think.
 
-I have broad interests in **computational biology** and in finding useful connections across biological questions, models, and techniques. I enjoy adapting the right tools to a problem—and developing new ones when existing approaches fall short.
+Outside of research, I enjoy photography, traveling, and working out. I also love connecting with people from different backgrounds and hearing new perspectives—feel free to reach out!
