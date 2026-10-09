@@ -5,14 +5,6 @@ title: life
 nav: true
 nav_order: 99
 photos:
-  - src: /assets/img/life/puerto-rico-2025-11.jpg
-    place: "Puerto Rico"
-    date: November 2025
-    caption: "Skydiving at 14,000 ft"
-    alt: "Skydiving above Puerto Rico"
-    width: 1920
-    height: 1080
-    composition: opening
   - src: /assets/img/life/new-york-2026-08.jpg
     place: "New York City"
     date: August 2026
@@ -20,6 +12,14 @@ photos:
     alt: "Manhattan skyline and harbor beneath a pink sunset"
     width: 2568
     height: 1926
+    composition: opening
+  - src: /assets/img/life/puerto-rico-2025-11.jpg
+    place: "Puerto Rico"
+    date: November 2025
+    caption: "Skydiving at 14,000 ft"
+    alt: "Skydiving above Puerto Rico"
+    width: 1920
+    height: 1080
     composition: landscape
   - src: /assets/img/life/portland-2026-08.jpg
     place: "Portland"
