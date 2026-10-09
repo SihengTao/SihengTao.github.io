@@ -16,8 +16,12 @@
   margin: 0;
   min-width: 0;
 }
-.life-photo--wide {
-  grid-column: 1 / -1;
+.life-photo--opening {
+  grid-column: 1 / 7;
+}
+.life-photo--landscape {
+  grid-column: 8 / 13;
+  margin-top: 6rem;
 }
 .life-photo--left {
   grid-column: 1 / 6;
@@ -129,16 +133,17 @@ html:has(.life-lightbox[open]) {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     row-gap: 3.5rem;
   }
-  .life-photo--wide,
   .life-photo--closing,
   .life-photo--right {
     grid-column: 1 / -1;
     margin-top: 0;
   }
+  .life-photo--opening,
   .life-photo--left,
   .life-photo--narrow {
     grid-column: 1 / 6;
   }
+  .life-photo--landscape,
   .life-photo--square {
     grid-column: 2 / 7;
     margin-top: 0;
