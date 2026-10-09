@@ -1,0 +1,159 @@
+/* A spacious, staggered photo journal, inspired by the Iris gallery layout. */
+.st-life {
+  padding-bottom: 5rem;
+}
+.st-life .life-intro {
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+}
+.life-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 2.5%;
+  row-gap: clamp(3.5rem, 8vw, 7rem);
+  align-items: start;
+}
+.life-photo {
+  margin: 0;
+  min-width: 0;
+}
+.life-photo--wide {
+  grid-column: 1 / -1;
+}
+.life-photo--left {
+  grid-column: 1 / 6;
+}
+.life-photo--right {
+  grid-column: 7 / 13;
+  margin-top: 9rem;
+}
+.life-photo--narrow {
+  grid-column: 2 / 6;
+}
+.life-photo--square {
+  grid-column: 7 / 13;
+  margin-top: 10rem;
+}
+.life-photo--small {
+  grid-column: 3 / 9;
+  width: min(100%, 400px);
+  justify-self: center;
+  margin: 1rem 0 2rem;
+}
+.life-photo--closing {
+  grid-column: 3 / 12;
+  margin-top: 1rem;
+}
+.life-photo-link {
+  display: block;
+  cursor: zoom-in;
+}
+.life-photo-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+.life-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+.life-photo figcaption {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.life-photo-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  flex-wrap: wrap;
+}
+.life-place {
+  font-weight: 500;
+}
+.life-date,
+.life-caption {
+  color: var(--global-text-color-light, #666);
+}
+.life-caption {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+}
+.life-lightbox {
+  border: 0;
+  padding: 3.5rem 1.5rem 1.5rem;
+  max-width: 96vw;
+  max-height: 96vh;
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, #222);
+}
+.life-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+.life-lightbox figure {
+  margin: 0;
+}
+.life-lightbox img {
+  display: block;
+  max-width: 88vw;
+  max-height: 77vh;
+  width: auto;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+.life-lightbox figcaption {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+.life-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+}
+.life-close span {
+  margin-left: 0.5rem;
+}
+html:has(.life-lightbox[open]) {
+  overflow: hidden;
+}
+@media (max-width: 650px) {
+  .life-gallery {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    row-gap: 3.5rem;
+  }
+  .life-photo--wide,
+  .life-photo--closing,
+  .life-photo--right {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .life-photo--left,
+  .life-photo--narrow {
+    grid-column: 1 / 6;
+  }
+  .life-photo--square {
+    grid-column: 2 / 7;
+    margin-top: 0;
+  }
+  .life-photo--small {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .life-photo-meta {
+    display: block;
+  }
+  .life-date {
+    display: block;
+  }
+  .life-lightbox {
+    padding-inline: 0.75rem;
+  }
+}
