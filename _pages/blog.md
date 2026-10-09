@@ -7,7 +7,7 @@ nav_order: 99
 photos:
   - src: /assets/img/life/new-york-2026-08.jpg
     place: "New York City"
-    date: August 2026
+    date: August 2025
     caption: "View from the Empire State Building"
     alt: "Manhattan skyline and harbor beneath a pink sunset"
     width: 2568
