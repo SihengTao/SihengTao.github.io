@@ -17,5 +17,3 @@ An overview of genomic technologies, biological databases, and bioinformatics to
 
 **BST 206 · Introductory Statistics for Medical Research**  
 Statistical methods for medical research, including hypothesis testing and regression.
-
-Responsibilities include grading assignments and holding office hours.
