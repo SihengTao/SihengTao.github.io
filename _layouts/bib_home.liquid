@@ -11,9 +11,25 @@
   {% assign equal_count = 5 %}
 {% endif %}
 <div class="row">
-  <div id="{{ entry.key }}" class="col-sm-12">
+  {% if page.url == '/publications/' and entry.preview %}
+    <div class="col-sm-3 mb-3">
+      <a href="https://doi.org/{{ entry.doi }}" aria-label="Read {{ entry.title | escape }}">
+        <img
+          src="{{ entry.preview | prepend: '/assets/img/publication_previews/' | relative_url }}"
+          alt="First page of {{ entry.title | escape }}"
+          loading="lazy"
+          style="display: block; width: 100%; max-width: 180px; height: auto; border: 1px solid #ddd; border-radius: 4px;"
+        >
+      </a>
+    </div>
+  {% endif %}
+  <div id="{{ entry.key }}" class="{% if page.url == '/publications/' and entry.preview %}col-sm-9{% else %}col-sm-12{% endif %}">
     <div class="title" style="font-weight: 400; font-size: 1.15rem;">{{ entry.title }}</div>
-    <div class="periodical"><strong><em>{{ entry.journal }}, {{ entry.year }}</em></strong></div>
+    <div class="periodical">
+      <strong
+        ><em>{{ entry.journal }}, {{ entry.year }}</em></strong
+      >
+    </div>
     <div class="author">
       {% for author in entry.author_array limit: author_limit %}
         {% unless forloop.first %}, {% endunless %}
@@ -22,14 +38,19 @@
         {% else %}
           {{ author.first | slice: 0 }}. {{ author.last }}
         {% endif %}
-        {% if forloop.index <= equal_count %}<sup>*</sup>{% endif %}
+        {% if forloop.index <= equal_count -%}
+          <sup>*</sup>
+        {%- endif %}
       {% endfor %}
       {% assign author_count = entry.author_array | size %}
       {% if author_count > author_limit %}, et al., {% endif %}
       {% case entry.key %}
-        {% when 'li2025digital' %}Sheyu Li, Xuelei Ma
-        {% when 'xu2025bacteriocin' %}Chongde Wu
-        {% when 'zhang2026childhood' %}Jiyan Liu, Yazhou He, Hu Liao, Xuelei Ma
+        {% when 'li2025digital' -%}
+          Sheyu Li, Xuelei Ma
+        {% when 'xu2025bacteriocin' -%}
+          Chongde Wu
+        {% when 'zhang2026childhood' -%}
+          Jiyan Liu, Yazhou He, Hu Liao, Xuelei Ma
       {% endcase %}
     </div>
     <div class="links">
