@@ -2,7 +2,9 @@
 ---
 {% assign author_limit = 4 %}
 {% assign equal_count = 0 %}
-{% if entry.key == 'li2025digital' %}
+{% if entry.key == 'poletto2026editorial' %}
+  {% assign author_limit = 5 %}
+{% elsif entry.key == 'li2025digital' %}
   {% assign equal_count = 3 %}
 {% elsif entry.key == 'xu2025bacteriocin' %}
   {% assign author_limit = 2 %}
@@ -34,7 +36,7 @@
       {% for author in entry.author_array limit: author_limit %}
         {% unless forloop.first %}, {% endunless %}
         {% if author.last == 'Tao' and author.first == 'Siheng' %}
-          <strong style="font-weight: 700; text-decoration: underline;">Siheng Tao</strong>
+          <strong style="font-weight: 700; text-decoration: underline;">S. Tao</strong>
         {% else %}
           {{ author.first | slice: 0 }}. {{ author.last }}
         {% endif %}
