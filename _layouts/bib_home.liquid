@@ -41,7 +41,7 @@
           {{ author.first | slice: 0 }}. {{ author.last }}
         {% endif %}
         {% if forloop.index <= equal_count -%}
-          <sup>*</sup>
+          <sup>†</sup>
         {%- endif %}
       {% endfor %}
       {% assign author_count = entry.author_array | size %}
